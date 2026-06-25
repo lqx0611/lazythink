@@ -1,0 +1,38 @@
+# ============================================================
+# 「懒得想」LazyThink — 通用配置文件
+# ============================================================
+# 本文件提交到Git，所有敏感信息通过环境变量注入
+# ============================================================
+
+spring:
+  profiles:
+    # [可改] 默认激活的配置环境: dev | prod
+    active: dev
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+
+mybatis-plus:
+  configuration:
+    # 数据库蛇形命名 → Java驼峰命名 自动映射
+    map-underscore-to-camel-case: true
+    # SQL日志输出（开发用StdOut，生产用NoLogging）
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+      # 逻辑删除字段（仅t_creation表有此字段）
+      logic-delete-field: isDeleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+# ============================================================
+# JWT 配置
+# ============================================================
+jwt:
+  # [必须改·生产] 通过环境变量 JWT_SECRET 注入，至少32字符随机字符串
+  secret: ${JWT_SECRET:lazythink-dev-secret-key-2026}
+  expiration-days: 7
+
+server:
+  port: 8080

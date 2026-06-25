@@ -1,0 +1,7 @@
+<!-- 广场页 - 创作列表 (PHASE1 占位) -->
+<view class="page-container">
+  <view class="empty-state">
+    <text class="text-h2">创作广场</text>
+    <text class="text-caption" style="margin-top: 16rpx;">还没有创作，去碰一下灵感吧~</text>
+  </view>
+</view>

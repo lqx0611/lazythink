@@ -1,0 +1,48 @@
+# ===== 项目设计文档（不提交） =====
+PRD.md
+TECH_DESIGN.md
+CODING_STANDARDS.md
+AGENTS.md
+AGENTS_V1.md
+AGENTS_V1_PHASE1.md
+DB_DESIGN.md
+API_DESIGN.md
+UI_STYLE.md
+DOCS_OUTLINE.md
+
+# ===== Maven / Java =====
+target/
+*.class
+*.jar
+*.war
+*.log
+!.mvn/wrapper/maven-wrapper.jar
+
+# ===== IDE =====
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+.factorypath
+nbproject/
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# ===== 环境变量 / 密钥 =====
+*.env
+*.env.local
+application-prod.yml   # 生产配置含密钥，不提交
+
+# ===== 小程序 =====
+frontend/miniprogram_npm/
+frontend/node_modules/
+frontend/project.private.config.json
+
+# ===== 上传目录（本地测试） =====
+uploads/

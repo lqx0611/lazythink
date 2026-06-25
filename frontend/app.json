@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/square/square",
+    "pages/profile/profile",
+    "pages/create/create",
+    "pages/detail/detail"
+  ],
+  "tabBar": {
+    "color": "#6B7280",
+    "selectedColor": "#FFC107",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "碰灵感",
+        "iconPath": "images/icons/tab-collide.png",
+        "selectedIconPath": "images/icons/tab-collide-active.png"
+      },
+      {
+        "pagePath": "pages/square/square",
+        "text": "广场",
+        "iconPath": "images/icons/tab-square.png",
+        "selectedIconPath": "images/icons/tab-square-active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "images/icons/tab-profile.png",
+        "selectedIconPath": "images/icons/tab-profile-active.png"
+      }
+    ]
+  },
+  "window": {
+    "navigationBarBackgroundColor": "#FFC107",
+    "navigationBarTitleText": "懒得想",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#F5F5F0"
+  }
+}

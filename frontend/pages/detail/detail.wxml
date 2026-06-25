@@ -1,0 +1,7 @@
+<!-- 创作详情页 (PHASE1 占位) -->
+<view class="page-container">
+  <view class="empty-state">
+    <text class="text-h2">创作详情</text>
+    <text class="text-caption" style="margin-top: 16rpx;">加载中...</text>
+  </view>
+</view>

@@ -1,0 +1,199 @@
+/**
+ * 「懒得想」全局样式
+ * 色板 + 通用组件样式 + 文本层级
+ * 参考: UI_STYLE.md
+ */
+
+/* ============================================================
+ * 色板 CSS 变量
+ * ============================================================ */
+page {
+  /* 主色系 */
+  --color-brand-yellow: #FFC107;
+  --color-brand-orange: #FF7043;
+  --color-text-primary: #1A1A2E;
+  --color-text-secondary: #6B7280;
+  --color-bg-page: #F5F5F0;
+  --color-bg-white: #FFFFFF;
+
+  /* 功能色 */
+  --color-success: #4CAF50;
+  --color-warning: #FF9800;
+  --color-error: #EF5350;
+  --color-link: #42A5F5;
+
+  /* 等级徽章色 */
+  --color-level-1: #B0BEC5;
+  --color-level-2: #4CAF50;
+  --color-level-3: #7C4DFF;
+  --color-level-4: #FFC107;
+
+  /* 间距基准 */
+  --spacing-xs: 8rpx;
+  --spacing-sm: 16rpx;
+  --spacing-md: 24rpx;
+  --spacing-lg: 32rpx;
+  --spacing-xl: 48rpx;
+
+  /* 字体 */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16rpx;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-page);
+}
+
+/* ============================================================
+ * 页面容器
+ * ============================================================ */
+.page-container {
+  padding: var(--spacing-md);
+  background-color: var(--color-bg-page);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* ============================================================
+ * 文本层级
+ * ============================================================ */
+.text-h1 {
+  font-size: 24rpx;
+  font-weight: bold;
+  line-height: 1.4;
+}
+.text-h2 {
+  font-size: 20rpx;
+  font-weight: bold;
+  line-height: 1.4;
+}
+.text-h3 {
+  font-size: 18rpx;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.text-body {
+  font-size: 16rpx;
+  font-weight: normal;
+  line-height: 1.6;
+}
+.text-caption {
+  font-size: 14rpx;
+  font-weight: normal;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+.text-small {
+  font-size: 12rpx;
+  font-weight: normal;
+  line-height: 1.4;
+  color: var(--color-text-secondary);
+}
+
+/* ============================================================
+ * 通用按钮
+ * ============================================================ */
+.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48rpx;
+  padding: 0 32rpx;
+  background-color: var(--color-brand-yellow);
+  color: var(--color-text-primary);
+  font-size: 16rpx;
+  font-weight: 500;
+  border-radius: 24rpx;
+  border: none;
+}
+.btn-primary:active {
+  transform: scale(0.95);
+  opacity: 0.85;
+}
+.btn-primary[disabled] {
+  background-color: #E5E5E0;
+  color: var(--color-text-secondary);
+  opacity: 0.6;
+}
+
+.btn-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48rpx;
+  padding: 0 32rpx;
+  background-color: transparent;
+  color: var(--color-brand-yellow);
+  font-size: 16rpx;
+  font-weight: 500;
+  border-radius: 24rpx;
+  border: 2rpx solid var(--color-brand-yellow);
+}
+.btn-secondary:active {
+  transform: scale(0.95);
+  opacity: 0.85;
+}
+
+.btn-danger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48rpx;
+  padding: 0 32rpx;
+  background-color: var(--color-error);
+  color: #FFFFFF;
+  font-size: 16rpx;
+  font-weight: 500;
+  border-radius: 24rpx;
+  border: none;
+}
+
+/* ============================================================
+ * 通用卡片
+ * ============================================================ */
+.card {
+  background-color: var(--color-bg-white);
+  border-radius: 16rpx;
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+  box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.06);
+}
+.card:active {
+  transform: translateY(2rpx);
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================================
+ * 输入框
+ * ============================================================ */
+.input-field {
+  background-color: var(--color-bg-page);
+  border-radius: 12rpx;
+  padding: 16rpx;
+  font-size: 16rpx;
+  border: 2rpx solid transparent;
+  transition: border-color 0.2s;
+}
+.input-field:focus {
+  border-color: var(--color-brand-yellow);
+}
+
+/* ============================================================
+ * 空状态
+ * ============================================================ */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80rpx var(--spacing-md);
+}
+.empty-state-image {
+  width: 200rpx;
+  height: 200rpx;
+  margin-bottom: var(--spacing-md);
+}
+.empty-state-text {
+  font-size: 16rpx;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+}
